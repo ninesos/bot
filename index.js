@@ -36,6 +36,7 @@ fs.readFile("point.txt", "utf8", (err, data) => {
 
         login({ appState: JSON.parse(appState) }, (err, api) => {
             if (err) return console.error(err);
+            console.clear();
             fs.writeFileSync('appstate.json', appState);
             var colors = require('colors');
             console.log(`Credit:`.underline.white);
